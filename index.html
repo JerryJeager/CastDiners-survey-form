@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surveyform</title>
+    <style>
+         .main {
+     background: linear-gradient(rgba(189, 49, 49, 0.6), rgba(189, 49, 49, 0.6)), url("https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center/cover no-repeat fixed;
+     scroll-behavior: smooth;
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+
+ }
+
+ .banner {
+     text-align: center;
+ }
+
+ #title {
+     font-family: 'Molle', cursive;
+     font: bolder;
+     font-size: 24px;
+
+
+ }
+
+ #description {
+     font-size: 15px;
+     font-family: 'Shadows Into Light', cursive;
+ }
+
+ .form {
+     width: 350px;
+     background: rgba(0, 0, 0, 0.7);
+     margin: 0 auto;
+     border-radius: 10px;
+     color: lightsalmon;
+     filter: grayscale(100%);
+     font-family: 'Shadows Into Light', cursive;
+     font-size: 14px;
+ }
+
+ input {
+     width: 200px;
+     height: 20px;
+     border-radius: 5px;
+     font-family: 'Shadows Into Light', cursive;
+     width: 80%;
+ }
+
+ .formcontent {
+     padding: 8px;
+     position: relative;
+     left: 25px;
+     bottom: 20px;
+ }
+
+ select {
+     width: 200px;
+     height: 24px;
+     font-family: 'Shadows Into Light', cursive;
+     border-radius: 5px;
+     color: lightsalmon;
+     filter: grayscale(100%);
+ }
+
+ #delivery {
+     width: 20px;
+     height: 13px;
+ }
+
+ #improvements {
+     width: 20px;
+     height: 13px;
+ }
+
+ textarea {
+     font-family: 'Shadows Into Light', cursive;
+     border-radius: 5px;
+ }
+
+ #submit {
+     border-radius: 5px;
+ }
+
+ #timeofday {
+     width: 20px;
+     height: 13px;
+ }
+
+@media screen and (min-width: 768px){
+#title{
+    font-size: 37px;
+}
+#description{
+    font-size: 17px;
+}
+.form{
+    width: 650px;
+    font-size: 18px;
+}
+input{
+    height: 30px;
+}
+select{
+    height: 30px;
+    width: 465px;
+}
+form{
+    position: relative;
+    left: 26px;
+}
+#delivery {
+    height: 15px;
+}
+textarea{
+    width: 465px;
+    height: 120px;
+}
+#improvements {
+    height: 15px;
+}
+#timeofday {
+    height: 15px;
+}
+#submit {
+    border-radius: 5px;
+    height: 25px;
+    width: 80px;
+}
+}
+@media screen and (min-width: 1024px) {
+    #title {
+        font-size: 40px;
+    }
+
+    #description {
+        font-size: 20px;
+    }
+    .form {
+        width: 900px;
+        font-size: 22px;
+    }
+    form{
+        position: relative;
+        left: 40px;
+    }
+
+    input {
+        height: 40px;
+    }
+
+    select {
+        height: 40px;
+        width: 710px;
+    }
+
+    #delivery {
+        height: 15px;
+    }
+
+    #improvements {
+        height: 15px;
+    }
+
+    #timeofday {
+        height: 15px;
+    }
+
+    #submit {
+        border-radius: 5px;
+        height: 27px;
+        width: 90px;
+    }
+    textarea{
+        width: 710px;
+        height: 150px;
+    }
+}
+    </style>
+  </head>
+  <body class="main">
+    <div class="banner">
+      <br />
+      <h1 id="title">Cast Diners Restaurant Survey Form</h1>
+      <p id="description">
+        <i>
+          we appreciate your efforts towards helping us provide better
+          services.</i
+        >
+      </p>
+    </div>
+    <br />
+    <br />
+    <div class="form">
+      <div class="formcontent">
+        <form action="" id="survey-form">
+          <br />
+          <br>
+          <label for="name" id="name-label">Name</label>
+          <br />
+          <br />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            required
+          />
+          <br />
+          <br />
+          <label for="email" id="email-label">Email</label>
+          <br />
+          <br />
+          <input
+            type="email"
+            name="email@gmail.com"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <br />
+          <br />
+          <label for="Phone Number">Phone Number</label>
+          <br />
+          <br />
+          <input
+            type="number"
+            name="phonenumber"
+            id="phonenumber"
+            placeholder="Enter your phone number"
+            required
+          />
+          <br />
+          <br />
+          <label for="age" id="number-label">Age(optional)</label>
+          <br />
+          <br />
+          <input
+            type="number"
+            name="8"
+            id="number"
+            min="10"
+            max="120"
+            placeholder="Enter your Age"
+          />
+          <br />
+          <br />
+          <label for="dropdown">What type of eater are you</label>
+          <br />
+          <br />
+          <select name="typeofeater" id="dropdown">
+            <!-- disabled, selected and hidden attributes are used to put a place holder on the option element -->
+            <option value="" disabled selected hidden>
+              Select the type of eater you are
+            </option>
+            <option value="Omnivore">Omnivore</option>
+            <option value="Carnivore">Carnivore</option>
+            <option value="Pollotarian">Pollotarian</option>
+            <option value="Pescetarian">Pescetarian</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Vegan">Vegan</option>
+          </select>
+          <br />
+          <br />
+          <label for="comment"
+            >What do you say about our delivery services</label
+          >
+          <br />
+          <br />
+          <input
+            type="radio"
+            name="delivery"
+            id="delivery"
+            value="We deliver food on time"
+          />
+          We deliver food on time
+          <br />
+          <input
+            type="radio"
+            name="delivery"
+            id="delivery"
+            value="We deliver food behind scheduled time"
+          />
+          We deliver food behind scheduled time
+          <br>
+          <br>
+          <label for="timeofday">When do you prefer going to Cast Diners Restaurant </label>
+          <br>
+          <br>
+          <input type="radio" name="timeofday" id="timeofday" value="morning">Morning
+          <br>
+          <input type="radio" name="timeofday" id="timeofday" value="afternoon">Afternoon
+          <br>
+          <input type="radio" name="timeofday" id="timeofday" value="evening">Evening
+          <br />
+          <br />
+          <label for="checkbox"
+            >What do you want to see improved about Cast Diners
+            Restaurant</label
+          >
+          <br>
+          <br />
+          <input
+            type="checkbox"
+            name="improvements"
+            id="improvements"
+            value="Our Delivery Services"
+          />Our Delivery services
+          <br />
+          <input
+            type="checkbox"
+            name="improvements"
+            id="improvements"
+            value="The Quality of our food "
+          />The Quality of our food
+          <br />
+          <input
+            type="checkbox"
+            name="improvements"
+            id="improvements"
+            value="Our food menu options"
+          />Our food menu options
+          <br />
+          <input
+            type="checkbox"
+            name="improvements"
+            id="improvements"
+            value="The level of cleaniness at our Restaurant"
+          />The level of cleaniness at our Restaurant
+          <br />
+          <input
+            type="checkbox"
+            name="improvements"
+            id="improvements"
+            value="Our online customer care services"
+          />Our online customer care services
+          <br />
+          <input
+            type="checkbox"
+            name="improvements"
+            id="improvements"
+            value="The air conditioning at the restaurant"
+          />The air conditioning at the restaurant
+          <br />
+          <input
+            type="checkbox"
+            name="improvements"
+            id="improvements"
+            value="Our emergency health care services"
+          />Our emergency health care services
+          <br />
+          <br />
+          <label for="comments"
+            >Any comments or suggestions?</label
+          >
+          <br />
+          <br />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="5"
+            placeholder="Enter your comment or suggestion"
+          ></textarea>
+          <br />
+          <br />
+          <button type="submit" id="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="footer"></div>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
